@@ -14,6 +14,8 @@ def select_tier(email, message):
 def form_input(event, context):
     tier = select_tier(event["email"], event["message"])
     return {
+        "email": event["email"],
+        "message": event["message"],
         "tier": tier
     }
 

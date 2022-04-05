@@ -60,27 +60,30 @@
       "Resource": "arn:aws:states:::sqs:sendMessage",
       "Parameters": {
         "MessageBody.$": "$",
-        "QueueUrl": "https://sqs.ca-central-1.amazonaws.com/991098640811/tier-1"
+        "QueueUrl": "https://sqs.ca-central-1.amazonaws.com/991098640811/tier-default"
       },
-      "End": true
+      "End": true,
+      "Comment": "Unknown"
     },
     "Tier 2": {
       "Type": "Task",
       "Resource": "arn:aws:states:::sqs:sendMessage",
       "Parameters": {
         "MessageBody.$": "$",
-        "QueueUrl": "https://sqs.ca-central-1.amazonaws.com/991098640811/tier-1"
+        "QueueUrl": "https://sqs.ca-central-1.amazonaws.com/991098640811/tier-2"
       },
-      "End": true
+      "End": true,
+      "Comment": "Tier 2"
     },
     "Tier 3": {
       "Type": "Task",
       "Resource": "arn:aws:states:::sqs:sendMessage",
       "Parameters": {
         "MessageBody.$": "$",
-        "QueueUrl": "https://sqs.ca-central-1.amazonaws.com/991098640811/tier-1"
+        "QueueUrl": "https://sqs.ca-central-1.amazonaws.com/991098640811/tier-3"
       },
-      "End": true
+      "End": true,
+      "Comment": "Tier 3"
     }
   }
 }
